@@ -1,0 +1,94 @@
+#main-application-wrapper {
+  display: flex;
+  min-block-size: 100vh;
+  justify-content: space-between;
+}
+
+.main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.85rem;
+  margin-inline-start: clamp(200px, 18.4vw, 275px);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  align-items: center;
+  gap: 0.8rem 1.4rem;
+}
+
+header > h1 {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: clamp(0.9rem, 2.8vw, 1.72rem);
+}
+
+.new-idea-btn {
+  background: var(--primary-text-color);
+  color: var(--main-background);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  margin: 0px;
+  transition: all 0.3s ease-in-out;
+  font-size: clamp(1.02rem, 3vw, 0.92rem);
+}
+
+.new-idea-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 1px var(--border-color);
+  font-weight: 700;
+  transform: scale(1.02);
+}
+
+.new-idea-btn:active {
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 1px var(--border-color);
+  font-weight: 700;
+  transform: scale(0.96);
+}
+
+.search-bar-input {
+  anchor-name: --search-input;
+  width: clamp(280px, 39%, 400px);
+  font-size: 1rem;
+  padding: 6px 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--muted-text-color);
+  color: var(--primary-text-color);
+  background: #fff;
+}
+
+.search-bar-input::placeholder {
+  color: rgb(201, 197, 197);
+  padding: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: clamp(0.7rem, 2.1vw, 1rem);
+}
+
+.search-icon-img {
+  position: absolute;
+  position-anchor: --search-input;
+  top: calc(anchor(top) + 0.25rem);
+  left: anchor(left);
+  padding-inline-start: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  #main-application-wrapper {
+    display: flex;
+    min-block-size: 100vh;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .main {
+    margin-inline-start: 0px;
+  }
+}

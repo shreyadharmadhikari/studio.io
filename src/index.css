@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+:root {
+  --main-background: #faf5ff;
+  --card-background: #ffffff;
+  --primary-text-color: #080708;
+  --muted-text-color: #777777;
+  --light-gray-shade: rgb(226, 226, 226);
+  --border-color: #d1d5de;
+
+  /* Platform Themes */
+  --youtube-accent: #ff0a0a;
+  --instagram-gradient: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+  --linkedin-accent: #0a66c2;
+
+  /* Status Badges */
+  --status-brainstorm: #e0f2fe; /* Light blue */
+  --status-brainstorm-txt: #0369a1;
+  --status-scripting: #f3e8ff; /* Light purple */
+  --status-scripting-txt: #6b21a8;
+  --status-filming: #ffedd5; /* Light orange */
+  --status-filming-txt: #c2410c;
+  --status-ready: #dcfce7; /* Light green */
+  --status-ready-txt: #15803d;
+  --accent-primary: #6366f1;
+  --transparent-grey: rgba(221, 221, 221, 0.75);
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+
+  min-block-size: 100vh;
+
+  background: var(--main-background);
+}

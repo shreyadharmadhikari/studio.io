@@ -1,0 +1,214 @@
+/* Sidebar.css */
+
+.sidebar-wrapper {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  inline-size: clamp(220px, 18vw, 270px);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 1.8rem;
+  background: var(--main-background);
+  gap: 3rem;
+  box-shadow: 0px 0px 5px 2px var(--transparent-grey);
+}
+
+.sidebar-wrapper h2 {
+  font-size: clamp(1.25rem, 2.24vw, 1.85rem);
+  color: var(--accent-primary);
+  padding-inline-start: 0.25rem;
+  font-family: "Agbalumo", system-ui;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-block-start: 1rem;
+}
+
+/* --- Custom Dropdown Component --- */
+.sort-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sort-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  opacity: 0.75;
+  padding-inline-start: 0.25rem;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  inline-size: 100%;
+}
+
+.custom-select-trigger {
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  background-color: var(--main-background);
+  border: 1px solid var(--transparent-grey);
+  border-block-end: 3px solid var(--transparent-grey);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.custom-select-trigger:hover {
+  border-color: var(--accent-primary);
+}
+
+.arrow {
+  color: var(--accent-primary);
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* --- Floating Options Menu --- */
+.custom-options-list {
+  position: absolute;
+  inset-block-start: calc(100% + 6px);
+  inset-inline-start: 0;
+  inline-size: 100%;
+  background: var(--main-background);
+  border: 1px solid var(--transparent-grey);
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 4px 0;
+  margin: 0;
+  z-index: 50; /* Floats above sidebar without pushing or covering buttons unnaturally */
+}
+
+.custom-options-list li {
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.custom-options-list li:hover {
+  background-color: rgba(98, 40, 215, 0.08);
+  color: var(--accent-primary);
+}
+
+.custom-options-list li.active {
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+/* --- Navigation Buttons --- */
+.nav-btns {
+  padding-block-start: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  inline-size: 100%;
+}
+
+.nav-btns > button {
+  inline-size: 100%;
+  padding: 10px 15px;
+  background: transparent;
+  text-align: start;
+  color: var(--primary-text-color);
+  border-inline: 1px solid var(--transparent-grey);
+  border-block-start: 1px solid var(--transparent-grey);
+  border-block-end: 3px solid var(--transparent-grey);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition:
+    transform 0.1s ease,
+    background-color 0.2s ease;
+}
+
+.nav-btns > button:hover {
+  background: var(--accent-primary);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.nav-btns > button.selected {
+  background: var(--accent-primary);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Mobile & Responsive View (max-width: 768px)
+   Converts fixed sidebar to a top nav section
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  .sidebar-wrapper {
+    position: relative;
+    inset-block-start: auto;
+    inset-inline-start: auto;
+    inset-block-end: auto;
+    inline-size: 100%;
+    padding: 1.25rem 1rem;
+    gap: 1.2rem;
+    box-shadow: 0px 2px 8px var(--transparent-grey);
+    border-block-end: 1px solid var(--transparent-grey);
+  }
+
+  .sidebar-wrapper h2 {
+    text-align: center;
+    padding-inline-start: 0;
+    padding-block-start: 0;
+  }
+
+  /* Compact layout for sort control on mobile */
+  .sort-control-group {
+    inline-size: 100%;
+    max-inline-size: 320px;
+    margin-inline: auto; /* Centers the sort box on small screens */
+  }
+
+  .sort-label {
+    text-align: center;
+    padding-inline-start: 0;
+  }
+
+  /* Horizontal swipeable bar for filter buttons */
+  .nav-btns {
+    padding-block-start: 0; /* Remove 5vh desktop gap */
+    flex-direction: row;
+    inline-size: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-x: auto;
+    gap: 0.65rem;
+    padding-block-end: 0.3rem; /* Small buffer for touch scroll */
+    scrollbar-width: none; /* Hide default scrollbar in Firefox */
+  }
+
+  .nav-btns::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome / Safari */
+  }
+
+  .nav-btns > button {
+    flex: 0 0 auto; /* Keeps buttons at natural width without squishing */
+    inline-size: auto;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+}

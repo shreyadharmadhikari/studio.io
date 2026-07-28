@@ -1,0 +1,110 @@
+/* Dashboard.css */
+
+.dashboard-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.05rem;
+  padding: 0;
+  margin-block-start: 1.7rem;
+}
+
+/* Empty State Wrapper - Centers content vertically and horizontally */
+.dashboard-wrapper.empty {
+  display: flex;
+  flex-direction: column; /* Stacks empty box and reset button vertically */
+  justify-content: center;
+  align-items: center;
+  min-block-size: 55vh;
+  inline-size: 100%;
+  gap: 1.25rem;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: 2.5rem;
+  padding-inline: 1.5rem;
+  max-inline-size: 420px;
+  inline-size: 100%;
+  background-color: var(--main-background);
+  border: 1px dashed var(--transparent-grey);
+  border-radius: 12px;
+  gap: 0.6rem;
+}
+
+.empty-state h1 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  margin: 0;
+}
+
+.empty-state p {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--primary-text-color);
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* Clear Filters Button Styling */
+.clear-filters-btn {
+  padding-block: 0.6rem;
+  padding-inline: 1.25rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent-primary, #6228d7);
+  background-color: transparent;
+  border: 1px solid var(--accent-primary, #6228d7);
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.clear-filters-btn:hover {
+  background-color: var(--accent-primary, #6228d7);
+  color: #ffffff;
+}
+
+.clear-filters-btn:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Tweaks */
+@media screen and (max-width: 600px) {
+  .dashboard-wrapper.empty {
+    min-block-size: 45vh;
+    padding-block-start: 1.5rem;
+    gap: 1rem;
+  }
+
+  .empty-state {
+    padding-block: 1.75rem;
+    padding-inline: 1rem;
+  }
+
+  .empty-state h1 {
+    font-size: 1.2rem;
+  }
+
+  .empty-state p {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .dashboard-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .clear-filters-btn {
+    inline-size: 100%; /* Spans full width on very narrow screens */
+    max-inline-size: 280px;
+  }
+}

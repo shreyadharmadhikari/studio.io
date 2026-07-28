@@ -1,0 +1,227 @@
+.content-card-wrapper {
+  background: var(--card-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.65rem;
+  padding: 1.25rem 1.25rem 1.5rem;
+  border-radius: 12px;
+  box-shadow:
+    2px 0px 4px 0px var(--transparent-grey),
+    -2px 0px 4px 0px var(--transparent-grey);
+}
+
+.youtube-card {
+  border-block-end: 2px solid var(--youtube-accent);
+}
+
+.instagram-card {
+  border-block-end: 2px solid transparent;
+  border-radius: 12px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(100deg, #f9ce34, #ee2a7b, #6228d7) border-box;
+}
+
+.linkedin-card {
+  border-block-end: 2px solid var(--linkedin-accent);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  block-size: max-content;
+  margin: 0;
+  padding: 0;
+}
+
+.project-info h3 {
+  font-size: clamp(0.85rem, 2.65vw, 1.45rem);
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  color: #000000;
+}
+
+.platform-name {
+  font-size: clamp(0.78rem, 2.18vw, 1.06rem);
+  color: var(--youtube-accent);
+  font-weight: 600;
+}
+
+.project-status {
+  font-size: clamp(0.45rem, 1.1vw, 1rem);
+  padding: 4px 7px;
+  border-radius: 7px;
+  font-weight: 400;
+}
+
+.brainstorm {
+  background: var(--status-brainstorm);
+  color: var(--status-brainstorm-txt);
+  border: 1px solid var(--status-brainstorm-txt);
+}
+
+.scripting {
+  background: var(--status-scripting);
+  color: var(--status-scripting-txt);
+  border: 1px solid var(--status-scripting-txt);
+}
+
+.filming {
+  background: var(--status-filming);
+  color: var(--status-filming-txt);
+  border: 1px solid var(--status-filming-txt);
+}
+
+.ready {
+  background: var(--status-ready);
+  color: var(--status-ready-txt);
+  border: 1px solid var(--status-ready-txt);
+}
+
+.reference-links {
+  margin-block-start: 0.2rem;
+}
+
+.reference-links p {
+  font-size: clamp(0.65rem, 2.55vw, 0.88rem);
+  padding-block-end: 6px;
+  color: #555454;
+}
+
+.reference-links span {
+  font-size: clamp(0.6rem, 1.7vw, 0.8rem);
+  padding: 4px 7px;
+  margin-inline-end: 0.4rem;
+  background: rgb(233, 233, 233);
+  border-radius: 999px;
+  display: inline-block;
+  inline-size: clamp(3.2rem, 4.6vw, 4.8rem);
+  text-align: center;
+}
+
+.no-refLink {
+  font-size: clamp(0.8rem, 2.8vw, 1rem);
+  color: #555454;
+}
+
+.reference-links span > a {
+  text-decoration: none;
+  color: var(--muted-text-color);
+}
+
+.reference-links span:hover a {
+  color: rgb(78, 78, 78);
+  font-weight: 500;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-script-wrapper {
+  background: rgba(236, 236, 236, 0.6);
+  border-radius: 8px;
+}
+
+.project-script {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  margin-inline-end: 1rem;
+  margin-block: 0.15rem;
+  text-align: justify;
+  font-size: clamp(0.68rem, 2.4vw, 0.88rem);
+  color: var(--primary-text-color);
+  white-space: pre-wrap;
+  padding: 10px;
+}
+
+.time-and-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-and-btn-wrapper > span {
+  font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+  color: #777777;
+  font-style: italic;
+}
+
+.action-btns {
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  margin-left: auto;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.edit-btn {
+  background: transparent;
+  color: #777777;
+  border: 1px solid #777777;
+  padding: 4px 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  border-radius: 8px;
+  font-size: clamp(0.7rem, 1.3vw, 0.88rem);
+}
+
+.edit-btn:hover {
+  cursor: pointer;
+}
+
+.edit-btn > img {
+  width: clamp(0.9rem, 2.1vw, 1rem);
+}
+
+.delete-btn {
+  background: transparent;
+  padding: 4px;
+  border: none;
+  outline: none;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+}
+
+.delete-btn > img {
+  width: clamp(1rem, 2.4vw, 1.6rem);
+}
+
+.youtube {
+  color: var(--youtube-accent);
+}
+
+.linkedin {
+  color: var(--linkedin-accent);
+}
+
+.instagram {
+  background: var(--instagram-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#copy-icon-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 5px;
+  padding-inline-start: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .reference-links span {
+    margin-block: 0.2rem;
+  }
+}
