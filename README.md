@@ -1,4 +1,3 @@
-````markdown
 # Studio.io — Content Creator Dashboard
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://studio-creator-dashboard.netlify.app/)
@@ -48,6 +47,7 @@ To run this project locally on your machine:
    ```bash
    git clone [https://github.com/shreya/studio-io.git](https://github.com/shreya/studio-io.git)
    ```
+
 ````
 
 2. **Navigate into the directory:**
@@ -82,3 +82,4 @@ This project is open-source and available under the [MIT License](https://www.go
 ```
 
 ```
+````
