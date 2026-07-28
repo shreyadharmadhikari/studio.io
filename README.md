@@ -48,7 +48,6 @@ To run this project locally on your machine:
    git clone [https://github.com/shreya/studio-io.git](https://github.com/shreya/studio-io.git)
    ```
 
-````
 
 2. **Navigate into the directory:**
 
