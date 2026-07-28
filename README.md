@@ -1,16 +1,84 @@
-# React + Vite
+````markdown
+# Studio.io — Content Creator Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://studio-creator-dashboard.netlify.app/)
+[![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-Currently, two official plugins are available:
+A modern, responsive single-page web application engineered for content creators to centralize, track, and manage video and post ideas seamlessly across social media platforms.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **Live Application Demo:** [https://studio-creator-dashboard.netlify.app/](https://studio-creator-dashboard.netlify.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🌟 Key Features
 
-## Expanding the ESLint configuration
+- **Multi-Platform Content Organization:** Streamline content planning across Instagram, YouTube, LinkedIn, and custom platforms with visual identity tags and status badges (Brainstorming, Scripting, Ready).
+- **Real-Time Multi-Filter Pipeline:** Dynamically filter project cards through a combined search engine (title and script text), platform category filters, and date-based sorting (Newest vs. Oldest).
+- **Persistent Local Data:** Uses browser `localStorage` integration to preserve idea entries, script revisions, and custom metadata across browser sessions.
+- **Dedicated Scripting Utility:** Features dedicated script content areas equipped with a one-click copy utility for rapid content deployment.
+- **External Reference Link Handling:** Automatically formats external links (ensuring `https://` protocol handling) and applies security attributes (`target="_blank"` with `rel="noopener noreferrer"`).
+- **Smart Empty States:** Fallback UI state with a dedicated **Clear Applied Filters** action to reset active searches instantly.
+- **Fully Responsive & Cross-Device Optimized:** Designed from the ground up to render crisply across mobile devices, tablets, laptops, and desktop screens using modern responsive CSS practices.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack & Standards
+
+- **Frontend Core:** React.js (Hooks, Functional Components, State Lifting)
+- **Styling:** Custom CSS3 (Flexbox, CSS Grid, CSS Variables, CSS Logical Properties)
+- **Build Tooling:** Vite
+- **Deployment:** Netlify CI/CD Pipeline
+
+---
+
+## 💡 Technical Highlights & Architecture
+
+- **CSS Logical Properties:** Built using modern CSS standards (`inline-size`, `block-size`, `padding-block`, `margin-block`) to support internationalization and robust layout flow.
+- **Derived State Engine:** Operates on single-source-of-truth state architecture, deriving filtered and sorted data pipelines without triggering unnecessary component re-renders.
+- **Defensive URL Formatting:** Auto-detects missing protocols on user-added reference URLs to guarantee reliable external tab navigation.
+
+---
+
+## 🚀 Local Development Setup
+
+To run this project locally on your machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/shreya/studio-io.git](https://github.com/shreya/studio-io.git)
+   ```
+````
+
+2. **Navigate into the directory:**
+
+```bash
+cd studio-io
+
+```
+
+3. **Install dependencies:**
+
+```bash
+npm install
+
+```
+
+4. **Launch the Vite development server:**
+
+```bash
+npm run dev
+
+```
+
+5. Open your browser and navigate to `http://localhost:5173`.
+
+---
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](https://www.google.com/search?q=LICENSE).
+
+```
+
+```
