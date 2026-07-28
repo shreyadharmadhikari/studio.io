@@ -72,12 +72,16 @@ function ContentCard({ card, onCardDelete, onCardEdit }) {
       </header>
       <section className="project-info">
         <h3>{card.projectName[0].toUpperCase() + card.projectName.slice(1)}</h3>
-        <section className="project-script-wrapper">
-          <p className="project-script">{card.script}</p>
-          <button id="copy-icon-btn" onClick={copyScriptHandler}>
-            <img src={copy_icon} alt="copy icon" width={14} />
-          </button>
-        </section>
+        {card.script.length > 0 ? (
+          <section className="project-script-wrapper">
+            <p className="project-script">{card.script}</p>
+            <button id="copy-icon-btn" onClick={copyScriptHandler}>
+              <img src={copy_icon} alt="copy icon" width={14} />
+            </button>
+          </section>
+        ) : (
+          <p></p>
+        )}
       </section>
       {card.links.length ? (
         <section className="reference-links">
