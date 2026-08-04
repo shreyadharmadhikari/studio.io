@@ -55,6 +55,7 @@ function App() {
 
   function resetAllFilters() {
     setSearchQuery("");
+    setFilterSelect("all platforms");
     setSortBy("newest");
   }
 
